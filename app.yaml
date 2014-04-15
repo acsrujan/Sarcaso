@@ -8,6 +8,3 @@ handlers:
 - url: /.*
   script: helloworld.application
   
-libraries:
-- name: tweepy
-  version: "1"

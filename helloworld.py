@@ -1,17 +1,14 @@
 """A simple webapp2 server."""
-
+import fix_path
+from tweepy import streaming
+from tweepy import auth
+from tweepy import oauth
 import webapp2
 import module
-import os
-import sys
 
 class MainPage(webapp2.RequestHandler):
 
     def get(self):
-        
-        sys.path.append(os.path.join(os.path.dirname(__file__),'tweepy'))       
-       
-        #import tweepy
 
         self.response.headers['Content-Type'] = 'text/plain'
         self.response.write('WEBSITE UNDER MAINTENANCE :P XD')

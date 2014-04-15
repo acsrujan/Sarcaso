@@ -2,13 +2,13 @@
 import webapp2
 import keys
 #import tweepy
-
+text = '<title>sarcaso</title><head>WEBSITE UNDER MAINTENANCE</head>'
 class MainPage(webapp2.RequestHandler):
 
     def get(self):
 
         self.response.headers['Content-Type'] = 'text/html'
-        self.response.write('<head>WEBSITE UNDER MAINTENANCE</head>')
+        self.response.write(text)
         
         #auth = tweepy.OAuthHandler(keys.consumer_key, keys.consumer_secret)
         #auth.set_access_token(keys.access_token, keys.access_token_secret)

@@ -10,7 +10,7 @@ class MainPage(webapp2.RequestHandler):
     def get(self):
         self.response.headers['Content-Type'] = 'text/plain'
         self.response.write('WEBSITE UNDER MAINTENANCE :P XD')
-        
+        """
         consumer_key="zrDvgegV0K1lBLIxukR0A"
         consumer_secret="dM2BpTPoEvFBZ9oVVNSGUi5j1T6JQcCcE4At7TeNmw
         access_token="1270521626-CuXFTkLQ58yZbEj2memLErALqMcRbeVp4j8izxz"
@@ -23,7 +23,7 @@ class MainPage(webapp2.RequestHandler):
         user = api.me()
         
         self.response.write(str(user.id))
-        
+        """
         #l=streamer.stream_func()
         #self.response.write(l)
         #counter.main()

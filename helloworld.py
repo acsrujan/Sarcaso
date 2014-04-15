@@ -2,16 +2,22 @@
 
 import webapp2
 
-import sys
-sys.path.insert(0, 'tweepy')
-import tweepy
 
 class MainPage(webapp2.RequestHandler):
 
     def get(self):
+        
+        
+        
         self.response.headers['Content-Type'] = 'text/plain'
         self.response.write('WEBSITE UNDER MAINTENANCE :P XD')
         self.response.write(str(dir()))
+        
+        try:
+            import tweepy
+        except exception as e:
+            self.response.write(str(e))
+        
         """
         consumer_key="zrDvgegV0K1lBLIxukR0A"
         consumer_secret="dM2BpTPoEvFBZ9oVVNSGUi5j1T6JQcCcE4At7TeNmw

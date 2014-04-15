@@ -1,7 +1,7 @@
 """A simple webapp2 server."""
 
 import webapp2
-import module
+import module, tweepy
 
 class MainPage(webapp2.RequestHandler):
 

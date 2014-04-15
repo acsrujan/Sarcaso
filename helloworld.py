@@ -1,7 +1,7 @@
 """A simple webapp2 server."""
 
 import webapp2
-#import tweepy
+
 
 
 
@@ -10,6 +10,8 @@ class MainPage(webapp2.RequestHandler):
     def get(self):
         self.response.headers['Content-Type'] = 'text/plain'
         self.response.write('WEBSITE UNDER MAINTENANCE :P XD')
+        self.response.write(str(dir()))
+        import tweepy
         self.response.write(str(dir()))
         """
         consumer_key="zrDvgegV0K1lBLIxukR0A"

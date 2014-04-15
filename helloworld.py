@@ -11,7 +11,7 @@ class MainPage(webapp2.RequestHandler):
         self.response.headers['Content-Type'] = 'text/plain'
         self.response.write('WEBSITE UNDER MAINTENANCE :P XD')
         self.response.write(str(dir()))
-        import tweepy
+        from tweepy import *
         self.response.write(str(dir()))
         """
         consumer_key="zrDvgegV0K1lBLIxukR0A"

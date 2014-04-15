@@ -1,6 +1,7 @@
 """A simple webapp2 server."""
 
 import webapp2
+import module
 
 class MainPage(webapp2.RequestHandler):
 
@@ -12,10 +13,6 @@ class MainPage(webapp2.RequestHandler):
         self.response.write('WEBSITE UNDER MAINTENANCE :P XD')
         self.response.write(str(dir()))
         
-        try:
-            import tweepy
-        except exception as e:
-            self.response.write(str(e))
         
         """
         consumer_key="zrDvgegV0K1lBLIxukR0A"

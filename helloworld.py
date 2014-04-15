@@ -2,11 +2,11 @@
 import webapp2
 import keys
 text = '<title>sarcaso</title><head>WEBSITE UNDER MAINTENANCE</head>'
+
 try:
     import tweepy
-except e:
-    text = str(e)
-
+finally:
+    text = 'Error in importing tweepy'
 
 class MainPage(webapp2.RequestHandler):
 

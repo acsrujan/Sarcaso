@@ -8,12 +8,12 @@ class MainPage(webapp2.RequestHandler):
     def get(self):
 
         self.response.headers['Content-Type'] = 'text/html'
-        self.response.write('WEBSITE UNDER MAINTENANCE :P XD \n')
+        self.response.write('<head>WEBSITE UNDER MAINTENANCE</head>')
         
         #auth = tweepy.OAuthHandler(keys.consumer_key, keys.consumer_secret)
         #auth.set_access_token(keys.access_token, keys.access_token_secret)
         
-        self.response.write('Toekn set\n')
+        #self.response.write('Toekn set\n')
         #api = tweepy.API(auth)
         #user = api.me()
 

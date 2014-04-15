@@ -1,6 +1,6 @@
 """A simple webapp2 server."""
 import webapp2
-import tweepy2
+import tweepy
 
 class MainPage(webapp2.RequestHandler):
 
@@ -14,11 +14,11 @@ class MainPage(webapp2.RequestHandler):
         access_token="1270521626-CuXFTkLQ58yZbEj2memLErALqMcRbeVp4j8izxz"
         access_token_secret="Qh3Z620M5ttqs3QTE5LNFCRadNmA9XabfakNkbuKMJzdj"
         #
-        auth = tweepy2.OAuthHandler(consumer_key, consumer_secret)
+        auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
         auth.set_access_token(access_token, access_token_secret)
         
         self.response.write('Toekn set\n')
-        api = tweepy2.API(auth)
+        api = tweepy.API(auth)
         user = api.me()
 
         #

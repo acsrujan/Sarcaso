@@ -1,7 +1,8 @@
 """A simple webapp2 server."""
 
 import webapp2
-import module, tweepy
+import module
+from tweepy import streaming
 
 class MainPage(webapp2.RequestHandler):
 

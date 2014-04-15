@@ -1,8 +1,7 @@
 """A simple webapp2 server."""
-import fix_path
-from tweepy import streaming
-from tweepy import auth
-from tweepy import oauth
+import streaming
+import auth
+import oauth
 import webapp2
 import module
 
@@ -11,8 +10,7 @@ class MainPage(webapp2.RequestHandler):
     def get(self):
 
         self.response.headers['Content-Type'] = 'text/plain'
-        self.response.write('WEBSITE UNDER MAINTENANCE :P XD')
-        self.response.write(str(dir()))
+        self.response.write('WEBSITE UNDER MAINTENANCE :P XD \n')
         
         self.response.write(module.constant)
         

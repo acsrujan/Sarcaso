@@ -9,7 +9,7 @@ class MainPage(webapp2.RequestHandler):
 
     def get(self):
         
-        #sys.path.append(os.path.join(os.path.dirname(__file__),'tweepy'))       
+        sys.path.append(os.path.join(os.path.dirname(__file__),'tweepy'))       
        
         #import tweepy
 

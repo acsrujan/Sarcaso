@@ -1,8 +1,13 @@
 """A simple webapp2 server."""
 import webapp2
 import keys
-#import tweepy
 text = '<title>sarcaso</title><head>WEBSITE UNDER MAINTENANCE</head>'
+try:
+    import tweepy
+except e:
+    text = str(e)
+
+
 class MainPage(webapp2.RequestHandler):
 
     def get(self):

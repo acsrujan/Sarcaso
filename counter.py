@@ -26,7 +26,7 @@ def calculate_unfollower_list(user_info, present_followers_ids, new_followers_id
             user_info.add(copy.deepcopy(user))
     return [user_info, follower_user_list]
 
-def calculate_follower_list():  
+def calculate_follower_list(user_info, present_followers_ids, unfollowers_ids):  
     #the important part where one gets the people who have 
     #unfollowed
     for ids in list(unfollower_user_list):
@@ -47,7 +47,7 @@ def calculate_difference(user_info):
     unfollowers_ids = original_followers.difference(present_followers_ids)
 
     #present_follower_list - original_follower_list = followers
-    new_followers_ids = present_followers.difference(original_followers_ids)
+    new_followers_ids = present_followers.difference(present_followers_ids)
     
     user_info, follower_user_list = calculate_follower_list(user_info, present_followers_ids, new_followers_ids)
     

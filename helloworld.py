@@ -1,6 +1,6 @@
 """A simple webapp2 server."""
 
-import counter
+#import counter
 import webapp2
 
 

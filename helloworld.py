@@ -13,6 +13,7 @@ class MainPage(webapp2.RequestHandler):
         self.response.write('WEBSITE UNDER MAINTENANCE :P XD')
         self.response.write(str(dir()))
         
+        self.response.write(module.constant)
         
         """
         consumer_key="zrDvgegV0K1lBLIxukR0A"

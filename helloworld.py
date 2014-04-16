@@ -19,10 +19,8 @@ class MainPage(webapp2.RequestHandler):
         
         api = tweepy2.API(auth)
         user = api.me()
-        '''
         self.response.write(str(user.id))
         self.response.write('\n')
-        '''
         '''
         #counter.main()
         '''

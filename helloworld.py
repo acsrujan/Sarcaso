@@ -1,12 +1,12 @@
 """A simple webapp2 server."""
 import webapp2
 import keys
-text = '<title>sarcaso</title><head>WEBSITE UNDER MAINTENANCE</head>'
+import sys
+import os
 
-try:
-    import tweepy
-finally:
-    text = 'Error in importing tweepy'
+text = '<title>sarcaso</title>
+        <head>Website under maintenance</head>'
+
 
 class MainPage(webapp2.RequestHandler):
 
@@ -18,7 +18,7 @@ class MainPage(webapp2.RequestHandler):
         #auth = tweepy.OAuthHandler(keys.consumer_key, keys.consumer_secret)
         #auth.set_access_token(keys.access_token, keys.access_token_secret)
         
-        #self.response.write('Toekn set\n')
+        #self.response.write('Token set\n')
         #api = tweepy.API(auth)
         #user = api.me()
 

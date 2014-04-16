@@ -38,7 +38,7 @@ class MainPage(webapp2.RequestHandler):
 	    self.response.write(str(sutte_timeline[i].text))
 	    self.response.write(new_line)
 	    i+=1
-	#
+	
 	#for t in sutte_timeline:
 	#    self.response.write(new_line)
 	#    self.response.write(str(t.text))

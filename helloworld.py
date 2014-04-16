@@ -17,7 +17,7 @@ class MainPage(webapp2.RequestHandler):
         auth = tweepy2.OAuthHandler(keys.consumer_key, keys.consumer_secret)
         auth.set_access_token(keys.access_token, keys.access_token_secret)
         
-        api = tweepy.API(auth)
+        api = tweepy2.API(auth)
         user = api.me()
 
         

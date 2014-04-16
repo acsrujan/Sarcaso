@@ -32,7 +32,7 @@ class MainPage(webapp2.RequestHandler):
 	self.response.write(str(sutte_timeline[1].text))
 	self.response.write(str(sutte_timeline[2].text))
 	self.response.write(str(sutte_timeline[3].text))
-	self.response.write(str(sutte_timeline[4].text))
+	#self.response.write(str(sutte_timeline[4].text))
 	#self.response.write(str(sutte_timeline[5].text))
 	#self.response.write(str(sutte_timeline[6].text))
 	i=0

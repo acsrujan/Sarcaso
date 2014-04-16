@@ -22,14 +22,11 @@ class MainPage(webapp2.RequestHandler):
         self.response.write(str(user.id))
         self.response.write('\n')
 	
-	sutte_timeline = api.home_timeline()
-	
-	for t in sutte_timeline:
-		self.response.write(str(t.id) + '\n' +  str(t.screen_name) + '\n'  + str(t.text))
-		self.response.write('\n')
-        '''
-        #counter.main()
-        '''
+	#sutte_timeline = api.home_timeline()
+        
+	#for t in sutte_timeline:
+	#	self.response.write(str(t.id) + '\n' +  str(t.screen_name) + '\n'  + str(t.text))
+	#	self.response.write('\n')
 
 application = webapp2.WSGIApplication([
     ('/', MainPage),

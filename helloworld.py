@@ -1,5 +1,4 @@
 """A simple webapp2 server."""
-
 import keys
 import tweepy2
 import webapp2

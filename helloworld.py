@@ -13,6 +13,7 @@ class MainPage(webapp2.RequestHandler):
 
         self.response.headers['Content-Type'] = 'text/html'
         self.response.write(text)
+	self.response.write('\n')
         
         auth = tweepy2.OAuthHandler(keys.consumer_key, keys.consumer_secret)
         auth.set_access_token(keys.access_token, keys.access_token_secret)
@@ -21,7 +22,7 @@ class MainPage(webapp2.RequestHandler):
         user = api.me()
 
         
-        self.response.write(str(user.id))
+        self.response.write(str(user))
         #l=streamer.stream_func()
         #self.response.write(l)
         #counter.main()

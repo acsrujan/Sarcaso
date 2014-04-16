@@ -2,9 +2,9 @@
 # Copyright 2009-2010 Joshua Roesslein
 # See LICENSE for details.
 
-from tweepy_models import ModelFactory
-from tweepy_utils import import_simplejson
-from tweepy_error import TweepError
+from tweepy2.models import ModelFactory
+from tweepy2.utils import import_simplejson
+from tweepy2.error import TweepError
 
 
 class Parser(object):
@@ -48,7 +48,7 @@ class JSONParser(Parser):
     def parse(self, method, payload):
         try:
             json = self.json_lib.loads(payload)
-        except Exception as e:
+        except Exception, e:
             raise TweepError('Failed to parse JSON payload: %s' % e)
 
         needsCursors = method.parameters.has_key('cursor')

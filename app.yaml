@@ -6,5 +6,5 @@ threadsafe: true
 
 handlers:
 - url: /.*
-  script: helloworld.application
+  script: test_stream.application
   

@@ -23,6 +23,10 @@ class MainPage(webapp2.RequestHandler):
         self.response.write('\n')
 	
 	sutte_timeline = api.user_timeline(screen_name='_SuTTe_')
+	
+	for t in sutte_timeline:
+		self.response.write(str(t))
+		self.response.write('\n')
         '''
         #counter.main()
         '''

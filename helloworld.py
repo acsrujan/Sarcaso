@@ -1,6 +1,6 @@
 """A simple webapp2 server."""
 
-import keys.py
+import keys
 import webapp2
 #import keys
 #import sys

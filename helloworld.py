@@ -1,7 +1,7 @@
 """A simple webapp2 server."""
 
 import keys
-import tweepy_auth
+from tweepy_auth import OAuthHandler
 import tweepy_oauth
 import webapp2
 #import sys

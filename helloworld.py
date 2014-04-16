@@ -34,9 +34,9 @@ class MainPage(webapp2.RequestHandler):
 	feed_length = len(sutte_timeline)
 	
 	self.response.write(str(sutte_timeline[i].text))
-	while i<feed_length:
+	while i<10:
 	    self.response.write(str(sutte_timeline[i].text))
-	    self.response.write(new_line)
+	    #self.response.write(new_line)
 	    i+=1
 	
 	#for t in sutte_timeline:

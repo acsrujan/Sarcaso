@@ -28,7 +28,6 @@ class MainPage(webapp2.RequestHandler):
         self.response.write(text)
 	    self.response.write('\n')
         
-        l = StdOutListener()
         
         auth = OAuthHandler(keys.consumer_key, keys.consumer_secret)
         auth.set_access_token(keys.access_token, keys.access_token_secret)
@@ -41,8 +40,8 @@ class MainPage(webapp2.RequestHandler):
         self.response.write('\n')
         '''
         
-        stream = Stream(auth, l)
-        stream.filter(track=['election'])
+        l = StdOutListener()
+        stream.filter(track=['IPL'])
         #counter.main()
 
 

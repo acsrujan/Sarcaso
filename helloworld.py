@@ -4,8 +4,7 @@ import keys
 #import sys
 #import os
 
-text = '<title>sarcaso</title>
-        <head>Website under maintenance</head>'
+text = '<title>sarcaso</title><head>Website under maintenance</head>'
 
 
 class MainPage(webapp2.RequestHandler):

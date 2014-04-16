@@ -24,12 +24,12 @@ class MainPage(webapp2.RequestHandler):
 	sutte_timeline = api.home_timeline()
         self.response.write('recieved home_timeline\n') 
         self.response.write(str(len(sutte_timeline))) 
-        
-        text = '' 
-        for t in sutte_timeline:
-            text = text + '\n' +str(t.text)
-        
-        self.response.write(text) 
+        self.response.write(str(dir(sutte_timeline[0])))
+        #text = '' 
+        #for t in sutte_timeline:
+        #    text = text + '\n' +str(t.text)
+        #
+        #self.response.write(text) 
 
 application = webapp2.WSGIApplication([
     ('/', MainPage),

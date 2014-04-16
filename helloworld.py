@@ -28,24 +28,14 @@ class MainPage(webapp2.RequestHandler):
         #self.response.write(str(sutte_timeline))
 	self.response.write('\n\n')
 
-	#self.response.write(str(sutte_timeline[0].text))
-	#self.response.write(str(sutte_timeline[1].text))
-	#self.response.write(str(sutte_timeline[2].text))
-	self.response.write(sutte_timeline[3].text)
-	self.response.write(sutte_timeline[19].text)
-	self.response.write(sutte_timeline[5].text)
-	self.response.write(sutte_timeline[6].text)
-	i=0
-	feed_length = len(sutte_timeline)
-	
 	#self.response.write(str(sutte_timeline[i].text))
 	#while i<10:
 	#    self.response.write(str(sutte_timeline[i].text))
 	#    i+=1
 	
-	#for t in sutte_timeline:
-	#    self.response.write(new_line)
-	#    self.response.write(str(t.text))
+	for t in sutte_timeline:
+	    self.response.write(new_line)
+	    self.response.write(t.text)
 	     
         #text = "" 
         #for tweet in sutte_timeline:

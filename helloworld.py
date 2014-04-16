@@ -33,7 +33,7 @@ class MainPage(webapp2.RequestHandler):
 	i=0
 	feed_length = len(sutte_timeline)
 	
-	self.response.write(str(sutte_timeline[i].text))
+	#self.response.write(str(sutte_timeline[i].text))
 	#while i<feed_length:
 	#	self.response.write(str(sutte_timeline[i].text))
 	#	i+=1

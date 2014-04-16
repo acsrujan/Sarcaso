@@ -29,8 +29,8 @@ class MainPage(webapp2.RequestHandler):
 	self.response.write('\n\n')
 
 	for t in sutte_timeline:
-	    print str(t)	 
-        
+	    self.response.write(str(t))
+	     
         #text = "" 
         #for tweet in sutte_timeline:
         #    text = text + "\n" + tweet.text

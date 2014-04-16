@@ -21,6 +21,8 @@ class MainPage(webapp2.RequestHandler):
         user = api.me()
         self.response.write(str(user.id))
         self.response.write('\n')
+	
+	sutte_timeline = api.user_timeline(screen_name='_SuTTe_')
         '''
         #counter.main()
         '''

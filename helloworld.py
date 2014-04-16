@@ -25,7 +25,11 @@ class MainPage(webapp2.RequestHandler):
         self.response.write('recieved home_timeline\n') 
         self.response.write(str(len(sutte_timeline))) 
         #self.response.write(str(dir(sutte_timeline[0])))
-        self.response.write(str(sutte_timeline)) 
+        #self.response.write(str(sutte_timeline))
+	self.response.write('\n\n')
+
+	for t in sutte_timeline:
+	    print str(t)	 
         
         #text = "" 
         #for tweet in sutte_timeline:

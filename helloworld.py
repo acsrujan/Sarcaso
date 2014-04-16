@@ -5,7 +5,7 @@ import tweepy2
 import webapp2
 
 text = '<title>sarcaso</title><head>Website under maintenance<br></head>'
-new_line = '<br>'
+new_line = '<p><br></p>'
 
 class MainPage(webapp2.RequestHandler):
 
@@ -34,9 +34,10 @@ class MainPage(webapp2.RequestHandler):
 	feed_length = len(sutte_timeline)
 	
 	self.response.write(str(sutte_timeline[i].text))
-	#while i<feed_length:
-	#	self.response.write(str(sutte_timeline[i].text))
-	#	i+=1
+	while i<feed_length:
+	    self.response.write(str(sutte_timeline[i].text))
+	    self.response.write(new_line)
+	    i+=1
 	#
 	#for t in sutte_timeline:
 	#    self.response.write(new_line)

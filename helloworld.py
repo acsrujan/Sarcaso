@@ -1,8 +1,8 @@
 """A simple webapp2 server."""
 import webapp2
 import keys
-import sys
-import os
+#import sys
+#import os
 
 text = '<title>sarcaso</title>
         <head>Website under maintenance</head>'

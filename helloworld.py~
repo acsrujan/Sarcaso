@@ -1,9 +1,7 @@
 """A simple webapp2 server."""
 
 import keys
-from tweepy2.streaming import StreamListener
-from tweepy2 import OAuthHandler
-from tweepy2 import Stream
+import tweepy2
 import webapp2
 
 text = '<title>sarcaso</title><head>Website under maintenance<br></head>'

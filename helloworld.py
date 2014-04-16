@@ -14,8 +14,8 @@ class MainPage(webapp2.RequestHandler):
         self.response.headers['Content-Type'] = 'text/html'
         self.response.write(text)
         
-        #auth = tweepy.OAuthHandler(keys.consumer_key, keys.consumer_secret)
-        #auth.set_access_token(keys.access_token, keys.access_token_secret)
+        auth = tweepy2.OAuthHandler(keys.consumer_key, keys.consumer_secret)
+        auth.set_access_token(keys.access_token, keys.access_token_secret)
         
         self.response.write('Token set set \n')
         

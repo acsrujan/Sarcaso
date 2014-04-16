@@ -28,7 +28,7 @@ class MainPage(webapp2.RequestHandler):
         #self.response.write(str(sutte_timeline))
 	self.response.write('\n\n')
 
-	self.response.write(str(sutte_timeline[1]),'\n')
+	self.response.write(str(sutte_timeline[0]))
 	for t in sutte_timeline:
 	    self.response.write(str(t))
 	     

@@ -25,11 +25,11 @@ class MainPage(webapp2.RequestHandler):
         self.response.write('recieved home_timeline\n') 
         self.response.write(str(len(sutte_timeline))) 
         #self.response.write(str(dir(sutte_timeline[0])))
-        self.response.write(sutte_timeline[0].text) 
+        self.response.write(str(sutte_timeline)) 
         
-        text = "" 
-        for tweet in sutte_timeline:
-            text = text + "\n" + tweet.text
+        #text = "" 
+        #for tweet in sutte_timeline:
+        #    text = text + "\n" + tweet.text
         
 application = webapp2.WSGIApplication([
     ('/', MainPage),

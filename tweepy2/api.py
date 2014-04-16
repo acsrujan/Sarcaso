@@ -48,7 +48,17 @@ class API(object):
                        'count', 'max_id', 'trim_user', 'exclude_replies',
                        'contributor_details', 'include_rts'],
     )
-
+    
+    # statuses/public_timeline
+    public_timeline = bind_api(
+        path='statuses/public_timeline',
+        payload_type='status',
+        payload_list=True,
+        allowed_param=['count', 'since_id', 'max_id', 'trim_user',
+                       'exclude_replies', 'contributor_details',
+                       'include_entities'],
+    )
+    
     # statuses/home_timeline
     home_timeline = bind_api(
         path='statuses/home_timeline',

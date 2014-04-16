@@ -27,9 +27,9 @@ class MainPage(webapp2.RequestHandler):
         #self.response.write(str(dir(sutte_timeline[0])))
         self.response.write(sutte_timeline[0].text) 
         text = '' 
-        #for t in sutte_timeline:
-        #    text = text + '\n' + str(t.text)
-        #
+        for t in sutte_timeline:
+            text = text + '\n' + t.text
+        
         #self.response.write(text) 
 
 application = webapp2.WSGIApplication([

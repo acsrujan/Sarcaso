@@ -19,19 +19,13 @@ class MainPage(webapp2.RequestHandler):
         auth = OAuthHandler(keys.consumer_key, keys.consumer_secret)
         auth.set_access_token(keys.access_token, keys.access_token_secret)
         
-        
-        
-        '''
         api = tweepy2.API(auth)
         user = api.me()
         
         self.response.write(str(user.id))
         self.response.write('\n')
-        '''
-        '''
         
-        stream = Stream(auth, l)
-        stream.filter(track=['election'])
+        '''
         #counter.main()
         '''
 

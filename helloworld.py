@@ -17,13 +17,11 @@ class MainPage(webapp2.RequestHandler):
         auth = tweepy2.OAuthHandler(keys.consumer_key, keys.consumer_secret)
         auth.set_access_token(keys.access_token, keys.access_token_secret)
         
-        self.response.write('Token set set \n')
-        
-        #api = tweepy.API(auth)
-        #user = api.me()
+        api = tweepy.API(auth)
+        user = api.me()
 
-        #
-        #self.response.write(str(user.id))
+        
+        self.response.write(str(user.id))
         #l=streamer.stream_func()
         #self.response.write(l)
         #counter.main()

@@ -26,7 +26,7 @@ class MainPage(webapp2.RequestHandler):
         text = '' 
         self.response.write(str(len(sutte_timeline))) 
         for t in sutte_timeline:
-            text = text + '\n'+ str(t.id) + '\t' +  str(t.screen_name) + '\t'  + str(t.text)
+            text = text + '\n'+ str(t.id) + '\t' + str(t.text)
         
         #self.response.write(text) 
 

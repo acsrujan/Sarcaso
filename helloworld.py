@@ -24,7 +24,8 @@ class MainPage(webapp2.RequestHandler):
 	sutte_timeline = api.home_timeline()
         self.response.write('recieved home_timeline\n') 
         self.response.write(str(len(sutte_timeline))) 
-        self.response.write(str(dir(sutte_timeline[0])))
+        #self.response.write(str(dir(sutte_timeline[0])))
+        self.response.write(sutte_timeline[0].text) 
         #text = '' 
         #for t in sutte_timeline:
         #    text = text + '\n' +str(t.text)

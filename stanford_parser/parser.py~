@@ -1,3 +1,7 @@
+###################################3
+###
+###
+
 import jpype
 from standoff import TextStandoff
 
@@ -76,12 +80,13 @@ stanford_parser_home = None
 
 def startJvm():
     import os
-    os.environ.setdefault("STANFORD_PARSER_HOME", "../stanford-parser-2010-08-20")
+    os.environ.setdefault("STANFORD_PARSER_HOME", "stanford-parser-2010-08-20")
     global stanford_parser_home
     stanford_parser_home = os.environ["STANFORD_PARSER_HOME"]
     jpype.startJVM(jpype.getDefaultJVMPath(),
                    "-ea",
                    "-Djava.class.path=%s/stanford-parser.jar" % (stanford_parser_home),)
+   
 startJvm() # one jvm per python instance.
 
 class Parser:
@@ -90,7 +95,7 @@ class Parser:
         if pcfg_model_fname == None:
             #self.pcfg_model_fname = "%s/englishPCFG.ser" % stanford_parser_home
             #self.pcfg_model_fname = "%s/englishFactored.ser" % stanford_parser_home
-            self.pcfg_model_fname = "%s/../englishPCFG.July-2010.ser" % stanford_parser_home            
+            self.pcfg_model_fname = "%s/englishPCFG.July-2010.ser" % stanford_parser_home            
         else:
             self.pcfg_model_fname = pcfg_model_fname
 
@@ -157,7 +162,14 @@ class Parser:
         standoffTokens = [standoffFromToken(sentence, token)
                           for token in tokens]
         posTags = [token.tag() for token in tree.taggedYield()]
-        print " ".join(["%s/%s" % (word.text, tag) for word, tag in zip(standoffTokens, posTags)])
+        #print " ".join(["%s/%s" % (word.text, tag) for word, tag in zip(standoffTokens, posTags)])
+        parts_of_speech = " ".join(["%s/%s" % (word.text, tag) for word, tag in zip(standoffTokens, posTags)])
+        
+        
+        ################################
+        return parts_of_speech
+        ################################
+        
         #print tree.taggedYield().toString(False)
         result = self.package.trees.EnglishGrammaticalStructure(tree)
         

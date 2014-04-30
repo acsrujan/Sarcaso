@@ -1,3 +1,7 @@
+###########################################################
+### Line 170 added to return tuple instead of printing ####
+###########################################################
+
 import jpype
 from standoff import TextStandoff
 
@@ -82,6 +86,7 @@ def startJvm():
     jpype.startJVM(jpype.getDefaultJVMPath(),
                    "-ea",
                    "-Djava.class.path=%s/stanford-parser.jar" % (stanford_parser_home),)
+   
 startJvm() # one jvm per python instance.
 
 class Parser:
@@ -157,7 +162,14 @@ class Parser:
         standoffTokens = [standoffFromToken(sentence, token)
                           for token in tokens]
         posTags = [token.tag() for token in tree.taggedYield()]
-        print " ".join(["%s/%s" % (word.text, tag) for word, tag in zip(standoffTokens, posTags)])
+        #print " ".join(["%s/%s" % (word.text, tag) for word, tag in zip(standoffTokens, posTags)])
+        parts_of_speech = " ".join(["%s/%s" % (word.text, tag) for word, tag in zip(standoffTokens, posTags)])
+        
+        
+        ################################
+        return parts_of_speech
+        ################################
+        
         #print tree.taggedYield().toString(False)
         result = self.package.trees.EnglishGrammaticalStructure(tree)
         

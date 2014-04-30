@@ -2,13 +2,13 @@ from stanford_parser.parser import Parser
 
 stanford_parser = Parser()
 
-dependencies = stanford_parser.parseToStanfordDependencies("The girl I met was your sister.")
+parts_of_speech, dependencies = stanford_parser.parseToStanfordDependencies("The girl I met was your sister.")
 
-dependencies = dependencies.split()
+parts_of_speech = parts_of_speech.split()
 
 reqd_tuple = []
 
-for t in dependencies:
+for t in parts_of_speech:
     s = t.encode('ascii','ignore')
     s=s.split('/')
     reqd_tuple.append(s)
@@ -21,4 +21,5 @@ while i<l:
         print reqd_tuple[i][0]
     i+=1
 
-#print reqd_tuple
+print parts_of_speech
+print dependencies

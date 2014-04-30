@@ -1,5 +1,5 @@
 ###########################################################
-### Line 170 added to return tuple instead of printing ####
+############# Line 188 edited to return tuple #############
 ###########################################################
 
 import jpype
@@ -167,7 +167,7 @@ class Parser:
         
         
         ################################
-        return parts_of_speech
+        #return parts_of_speech
         ################################
         
         #print tree.taggedYield().toString(False)
@@ -185,5 +185,5 @@ class Parser:
 
 
 
-        return Dependencies(sentence, standoffTokens, posTags, returnList)
+        return parts_of_speech, Dependencies(sentence, standoffTokens, posTags, returnList)
                               

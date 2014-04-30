@@ -3,8 +3,13 @@
 import keys
 import tweepy2
 import webapp2
+from google.appengine.ext import db
 
 text = '<title>sarcaso</title><head>Website under maintenance<br></head>'
+
+class Tweet(db.Model):
+    id = db.StringProperty(required=True)
+    text = db.StringProperty(required=True)
 
 class MainPage(webapp2.RequestHandler):
 
@@ -24,8 +29,12 @@ class MainPage(webapp2.RequestHandler):
 	sutte_timeline = api.home_timeline()
         self.response.write('recieved home_timeline\n') 
         self.response.write(str(len(sutte_timeline))) 
-        #self.response.write(str(dir(sutte_timeline[0])))
-        self.response.write(str(sutte_timeline)) 
+        self.response.write(str(dir(sutte_timeline[0])))
+        t = Tweet(id=str(sutte_timeline[0].id), text=sutte_timeline[0].text)
+        t.put()
+        
+        self.response.write('put in data store') 
+        #self.response.write(str(sutte_timeline)) 
         
         #text = "" 
         #for tweet in sutte_timeline:

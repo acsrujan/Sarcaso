@@ -8,7 +8,6 @@ def get_dict_relations(sentence):
     parts_of_speech, dependencies = stanford_parser.parseToStanfordDependencies(sentence.strip())
     parts_of_speech = parts_of_speech.split()
 
-
     #Create list of tuples of words with their parts of speech
     part_of_speech_tuple = []
     for t in parts_of_speech:

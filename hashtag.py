@@ -1,5 +1,3 @@
-#from stanford-parser.parser import Parser
-
 def search_hashtag(tweet):
 
     t = tweet.text
@@ -13,8 +11,7 @@ def search_hashtag(tweet):
             return 1
 
         #check if hashtag appends tweet
-        elif position!=0 and (t[position]=='\n' or (t[position-2]=='.'
-            t[position-1]==' ')):
+        elif position!=0 and (t[position]=='\n' or (t[position-2]=='.' or t[position-1]==' ')):
             return 1
 
         #hashtag present but maybe part of sentence

@@ -1,6 +1,5 @@
-def search_hashtag(tweet):
+def search_hashtag(t):
 
-    t = tweet.text
     position = t.find('#sarcasm')
 
     #search if hashtag is present in tweet

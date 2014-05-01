@@ -31,7 +31,7 @@ print "------------------------------------"
 
 #lexical analysis
 
-#hash_value = hashtag.search_hashtag(tweet)
+hash_value = hashtag.search_hashtag(tweet)
 
 
 #like/dislike analysis
@@ -66,7 +66,12 @@ for k in sample_relations.keys():
            
          sample_trait[k] = avg_val
 
+final_output = 0.0
+
+if hash_value == 1:
+    final_output = (2.0 * cal_output.calculate_output(sample_trait,'user_1') + 1)/3
+
 print '\n'
 print "----------------------------------------------------------"
-print "Sarcasm Value Calculated: ", cal_output.calculate_output(sample_trait,'user_1')
+print "Sarcasm Value Calculated: ", final_output
 print "----------------------------------------------------------"
